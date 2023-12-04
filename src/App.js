@@ -1,13 +1,10 @@
-import "./styles/App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Main from "./components/Main";
-import DiaryEdit from "./pages/diary/DiaryEdit";
-import DiaryIndex from "./pages/diary/DiaryIndex";
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import Index from "./pages/Index";
 import Intro from "./pages/Intro";
-import DiaryAdd from "./pages/diary/diaryAdd";
+import DiaryAdd from "./pages/diary/DiaryAdd";
+import DiaryEdit from "./pages/diary/DiaryEdit";
+import DiaryIndex from "./pages/diary/Index";
+import "./styles/App.css";
 
 function App() {
   return (
@@ -17,12 +14,9 @@ function App() {
           <Route path="/" element={<Intro />}></Route>
           <Route path="/home" element={<Index />}></Route>
           <Route path="/diary" element={<DiaryIndex />}></Route>
-          <Route path="/diary/Add" element={<DiaryAdd />}></Route>
-          <Route path="/diary/Edit" element={<DiaryEdit />}></Route>
+          <Route path="/diary/add" element={<DiaryAdd />}></Route>
+          <Route path="/diary/edit/:pk" element={<DiaryEdit />}></Route>
         </Routes>
-        <Header />
-        <Main />
-        <Footer />
       </div>
     </div>
   );

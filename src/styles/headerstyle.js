@@ -5,18 +5,15 @@ export const TopBar = styled.header`
   width: 100%;
   height: 64px;
   padding: 8px 4px;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 6px;
   flex-shrink: 0;
   background: #fef7ff;
-
   h2 {
     font-weight: 400;
   }
+
   button {
     display: flex;
     width: 48px;
