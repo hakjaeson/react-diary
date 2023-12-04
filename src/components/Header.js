@@ -1,15 +1,20 @@
 import React from "react";
-import { TopBar } from "../styles/topbar";
 
-const Header = () => {
+import { TopBar } from "../styles/headerstyle";
+const Header = props => {
   return (
     <TopBar>
-      <button>
-        <img src="images/bt_list.svg" />
+      <button
+        onClick={() => {
+          props.handleClickMenu();
+        }}
+      >
+        <img src={`/images/${props.icon}`} />
       </button>
-      <p>타이틀</p>
-      <button>
-        <img src="images/bt_info.svg" />
+
+      <h2>{props.children}</h2>
+      <button onClick={() => {}}>
+        <img src="/images/bt_login.svg" />
       </button>
     </TopBar>
   );

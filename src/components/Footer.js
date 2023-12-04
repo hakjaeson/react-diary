@@ -1,8 +1,13 @@
 import React from "react";
-import { BotBar } from "../styles/botbar";
+import { BotBar } from "../styles/footerstyle";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
-  return <BotBar>작성자</BotBar>;
+const Footer = props => {
+  return (
+    <BotBar>
+      <Link to="/home">{props.children}</Link>
+    </BotBar>
+  );
 };
 
 export default Footer;
